@@ -8,7 +8,6 @@ The demo contains a basic web3 app and smart contract for minting NFTs.
 ## Usage
 
 ```bash
-git clone <this-repo>
 npm install
 
 # terminal 1
@@ -16,10 +15,17 @@ npx hardhat node
 
 # terminal 2
 npx hardhat compile
+# This will create an artifacts/ directory in src/ which contains the compiled smart contract code
+
 npx hardhat run scripts/sample-script.js --network localhost
+# Update the deployed contract address in `components/Home.js` with this output
 
 # terminal 3
 npm run dev
 ```
 
-Update the deployed contract address in `components/Home.js`
+At this point you'll have to download and install metamask to be able to interact with the smart contracts and send ethereum funds on the local testnet
+
+## Understanding
+
+![Minting Flowchart](./docs/FlowChart.png)
